@@ -1,0 +1,11 @@
+language: java
+
+train_version: 1.0
+
+tools:
+  - ossjava/ant/1.9.4
+  - msjava/oraclejdk/1.8.0_162
+
+build: ../build/install_train.sh
+
+test: ../build/train_test.sh
