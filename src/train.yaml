@@ -6,6 +6,17 @@ tools:
   - ossjava/ant/1.9.4
   - msjava/oraclejdk/1.8.0_162
 
-build: ../build/install_train.sh
 
-test: ../build/train_test.sh
+build_types:
+    - build_type:
+        name: quick
+        build: ../build/install_train.sh
+        default: true
+    - build_type:
+        name: release
+        build: ../build/install_train.sh
+
+test_types:
+    - test_type:
+        name: unit
+        test: ../build/train_test.sh
